@@ -1,8 +1,17 @@
-package helloworld
+package learn_go_with_tests
 
 import (
 	"testing"
 )
+
+const englishHelloPrefix = "hello, "
+
+func Hello(name string) string {
+	if name == "" {
+		name = "world"
+	}
+	return englishHelloPrefix + name
+}
 
 func TestHello(t *testing.T) {
 	// 封装一个函数来进行断言
